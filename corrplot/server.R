@@ -71,10 +71,12 @@ shinyServer(function(input, output) {
         }
         
         y    <- diamonds[, col_y]
+        df <- as.data.frame(x,y)
+        
         #producing correlation plot as output
-        ggplot(diamonds, aes(x = x, y = y), environment = environment()) + 
+        ggplot(df, aes(x = x, y = y)) + 
             geom_point() +
             geom_smooth(method = lm) +
-            xlab(colnames(x)) + ylab(colnames(y))
+            xlab(colnames(df$x)) + ylab(colnames(df$y))
     })
 })
