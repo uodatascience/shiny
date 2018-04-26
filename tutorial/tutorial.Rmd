@@ -121,7 +121,7 @@ server <- function(input, output){
 ![](render_functions.png)
 
 
-3. Use inut values with input$
+3. Use input values with input$
 
 Here's a simple example using what we've learned so far:  
 ```{r}
